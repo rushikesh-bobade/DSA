@@ -1,6 +1,6 @@
 # 🧠 LeetCode Solutions
 
-> Auto-synced by [CommitCode](https://github.com/your-username/commitcode)
+> Auto-synced by [CommitCode](https://github.com/rushikesh-bobade/commitcode)
 
 ## Stats
 

@@ -41,9 +41,9 @@ Follow up: Could you solve it without converting the integer to a string?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 5 ms (beats 78.57%)  
-**Memory:** 45.9 MB (beats 52.57%)  
-**Submitted:** 2026-06-04T10:09:52.965Z  
+**Runtime:** 4 ms (beats 100.00%)  
+**Memory:** 45.8 MB (beats 71.33%)  
+**Submitted:** 2026-06-04T10:10:49.224Z  
 
 ```java
 class Solution {

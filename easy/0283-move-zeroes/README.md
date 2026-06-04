@@ -31,23 +31,14 @@ Follow up: Could you minimize the total number of operations done?
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-06-04T20:54:04.189Z  
+**Memory:** 43 MB  
+**Submitted:** 2026-06-04T20:55:24.356Z  
 
 ```java
 
-        if(left==-1){
-            return;
-        }
-
         for(int i=left+1;i<nums.length;i++){
-            if(nums[i]==0){
+            if(nums[i]!=0){
                 int temp=nums[i];
-                nums[i]=nums[left];
-                nums[left]=temp;
-                left++;
-            }
-
 
 ```
 

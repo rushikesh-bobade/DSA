@@ -1,15 +1,15 @@
 # 🧠 LeetCode Solutions
 
-> Auto-synced by [CommitCode](https://github.com/rushikesh-bobade/commitcode)
+> Auto-synced by [CommitCode](https://github.com/your-username/commitcode)
 
 ## Stats
 
 | Metric | Count |
 |--------|-------|
-| Total Solved | 1 |
+| Total Solved | 2 |
 | Easy | 0 |
 | Medium | 0 |
-| Hard | 1 |
+| Hard | 2 |
 | Current Streak | 1 days |
 | Last Synced | 6/4/2026 |
 
@@ -17,7 +17,7 @@
 
 | Language | Solutions |
 |----------|-----------|
-| Java | 1 |
+| Java | 2 |
 
 ---
-*Last updated: 2026-06-04T09:18:58.336Z*
+*Last updated: 2026-06-04T09:27:29.727Z*

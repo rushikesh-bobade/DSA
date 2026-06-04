@@ -53,31 +53,44 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-06-04T09:27:25.632Z  
+**Runtime:** 5 ms (beats 53.89%)  
+**Memory:** 46.5 MB (beats 61.81%)  
+**Submitted:** 2026-06-04T09:27:31.939Z  
 
 ```java
-class Solution {
-    public String convert(String s, int numRows) {
-        if (numRows == 1 || s.length() <= numRows) {
-            return s;
-        }
+class Solution {
+    public String convert(String s, int numRows) {
+        if (numRows == 1 || s.length() <= numRows) {
+            return s;
+        }
 
-        StringBuilder[] rows = new StringBuilder[numRows];
-        
-        for (int i = 0; i < numRows; i++) {
-            rows[i] = new StringBuilder();
-        }
+        StringBuilder[] rows = new StringBuilder[numRows];
+        
+        for (int i = 0; i < numRows; i++) {
+            rows[i] = new StringBuilder();
+        }
 
-        int currentRow = 0;
-        boolean goingDown = false;
+        int currentRow = 0;
+        boolean goingDown = false;
 
-        for (char c : s.toCharArray()) {
-            rows[currentRow].append(c);
+        for (char c : s.toCharArray()) {
+            rows[currentRow].append(c);
 
-            if (currentRow == 0 || currentRow == numRows - 1) {
+            if (currentRow == 0 || currentRow == numRows - 1) {
+                goingDown = !goingDown;
+            }
 
+            currentRow += goingDown ? 1 : -1;
+        }
+
+        StringBuilder result = new StringBuilder();
+        for (StringBuilder row : rows) {
+            result.append(row);
+        }
+
+        return result.toString();
+    }
+}
 ```
 
 ---

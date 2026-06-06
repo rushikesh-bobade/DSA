@@ -44,17 +44,19 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.9 MB  
-**Submitted:** 2026-06-06T19:44:11.807Z  
+**Submitted:** 2026-06-06T19:47:44.227Z  
 
 ```java
        int rightSum=0;
        for(int i=nums.length-1;i>0;i--){
-        leftSum[i]=leftSum[i]+rightSum;
-        rightSum=rightSum+nums[i];
+        leftSum[i]=leftSum[i]-rightSum;
+        rightSum+=nums[i];
        }
 
        }
         leftSum[i]=leftSum[i-1]+nums[i];
+
+       return leftSum;
 
 ```
 

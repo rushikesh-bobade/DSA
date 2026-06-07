@@ -45,28 +45,55 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-06-07T06:09:45.188Z  
+**Runtime:** 66 ms (beats 73.78%)  
+**Memory:** 86.2 MB (beats 50.74%)  
+**Submitted:** 2026-06-07T06:09:51.972Z  
 
 ```java
 /**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-class Solution {
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode createBinaryTree(int[][] descriptions) {
+        Map<Integer, TreeNode> map = new HashMap<>();
+        Set<Integer> children = new HashSet<>();
 
+        for (int[] d : descriptions) {
+            int parent = d[0], child = d[1], isLeft = d[2];
+
+            map.putIfAbsent(parent, new TreeNode(parent));
+            map.putIfAbsent(child, new TreeNode(child));
+
+            if (isLeft == 1) {
+                map.get(parent).left = map.get(child);
+            } else {
+                map.get(parent).right = map.get(child);
+            }
+
+            children.add(child);
+        }
+
+        for (int[] d : descriptions) {
+            if (!children.contains(d[0])) {
+                return map.get(d[0]);
+            }
+        }
+
+        return null;
+    }
+}
 ```
 
 ---

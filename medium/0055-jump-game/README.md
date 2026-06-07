@@ -10,25 +10,21 @@ _Description not available._
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 88.04%)  
-**Memory:** 48 MB (beats 22.72%)  
-**Submitted:** 2026-06-07T15:04:02.728Z  
+**Memory:** 47.9 MB (beats 41.38%)  
+**Submitted:** 2026-06-07T15:05:40.691Z  
 
 ```java
 class Solution {
     public boolean canJump(int[] nums) {
-        int maxIndex=0;
-
-        for(int i=0;i<nums.length;i++){
-            
-            if(i>maxIndex){
-                return false;
-            }
-            maxIndex=Math.max(maxIndex,i+nums[i]);
+        int maxReach = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i > maxReach) return false;
+            maxReach = Math.max(maxReach, i + nums[i]);
+            if (maxReach >= nums.length - 1) return true;
         }
         return true;
     }
 }
-
 ```
 
 ---

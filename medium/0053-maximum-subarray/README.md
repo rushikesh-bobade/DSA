@@ -43,15 +43,25 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-06-07T14:25:00.198Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-06-07T14:26:55.944Z  
 
 ```java
 class Solution {
     public int maxSubArray(int[] nums) {
         int maxSum=0;
         int count=0;
+
+        for(int i =0;i<nums.length;i++){
+            count=count+nums[i];
+            maxSum=Math.max(maxSum,count);
+            if(count<0){
+                count=0;
+            }
+        }
+    return maxSum;
     }
+    
 }
 ```
 

@@ -34,23 +34,22 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-06-07T14:48:22.359Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-06-07T14:49:02.590Z  
 
 ```java
-class Solution {
-    public boolean canJump(int[] nums) {
-        int ans=0;
-        for(int i=0;i<nums.length;i++){
-            ans=i+nums[i];
-            if(ans==nums[nums.length-1]){
-        }
-    }
-                return true;
-            }
+class Solution {
+    public boolean canJump(int[] nums) {
+        int ans=0;
+        for(int i=0;i<nums.length;i++){
+            ans=i+nums[i];
+            if(ans==nums[nums.length-1]){
+                return true;
+            }
+        }
+        return false;
+    }
 }
-        return false;
-
 
 ```
 

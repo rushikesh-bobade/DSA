@@ -37,10 +37,17 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42 MB  
-**Submitted:** 2026-06-07T06:48:35.087Z  
+**Memory:** 41.9 MB  
+**Submitted:** 2026-06-07T06:49:43.587Z  
 
 ```java
+            return 1;
+        if(i==m-1||j==n-1){
+        
+    public int grid(int i,int j,int m,int n){
+        }else if(i==m||j==n){
+            return 0;
+        }
 
         int w1=grid(i+1,j,m,n);
         int w2=grid(i,j+1,m,n);
@@ -49,15 +56,7 @@ Constraints:
     }
 
     public int uniquePaths(int m, int n) {  
-        }
-            return 0;
-        }else if(i==m||j==n){
-        if(i==n-1||j==n-1){
-            return 1;
-    public int grid(int i,int j,int m,int n){
-        
-
-class Solution {
+       int ans= grid(0,0,m,n);
 
 ```
 

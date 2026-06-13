@@ -74,22 +74,29 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-06-13T19:27:29.477Z  
+**Runtime:** 2 ms (beats 96.85%)  
+**Memory:** 46.8 MB (beats 21.32%)  
+**Submitted:** 2026-06-13T19:27:35.073Z  
 
 ```java
-                sum += weights[c - 'a'];
-            }
+class Solution {
+    public String mapWordWeights(String[] words, int[] weights) {
+        StringBuilder result = new StringBuilder();
 
-            int mod = sum % 26;
-            result.append((char)('z' - mod));
-        }
+        for (String word : words) {
+            int sum = 0;
 
-        return result.toString();
-    }
+            for (char c : word.toCharArray()) {
+                sum += weights[c - 'a'];
+            }
+
+            int mod = sum % 26;
+            result.append((char)('z' - mod));
+        }
+
+        return result.toString();
+    }
 }
-
 ```
 
 ---

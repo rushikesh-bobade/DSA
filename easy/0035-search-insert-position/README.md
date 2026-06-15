@@ -39,23 +39,31 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-06-15T20:43:19.291Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.5 MB (beats 81.90%)  
+**Submitted:** 2026-06-15T20:44:01.204Z  
 
 ```java
-                return mid;
-            if(nums[mid]==target){
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int s=0;
+        int e=nums.length-1;
 
-             int mid=(s+e)/2;
-        while(s<=e){
 
-            }else if(nums[mid]<target){
-                s=mid+1;
-            }else{
-                e=mid-1;
-            }
+        while(s<=e){
+             int mid=(s+e)/2;
 
+            if(nums[mid]==target){
+                return mid;
+            }else if(nums[mid]<target){
+                s=mid+1;
+            }else{
+                e=mid-1;
+            }
+        }
+        return s;
+    }
+}
 ```
 
 ---

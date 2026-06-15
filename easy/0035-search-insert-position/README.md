@@ -40,21 +40,30 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-06-15T20:43:39.356Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-06-15T20:44:40.099Z  
 
 ```java
-                return mid;
-            }else if(nums[mid]<target){
-                s=mid+1;
-            }else{
-                e=mid-1;
-            }
-        }
-        return s;
-    }
-}
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int s=0;
+        int e=nums.length-1;
 
+
+        while(s<=e){
+             int mid=(s+e)/2;
+
+            if(nums[mid]==target){
+                return mid;
+            }else if(nums[mid]<target){
+                s=mid+1;
+            }else{
+                e=mid-1;
+            }
+        }
+        return s;
+    }
+}
 ```
 
 ---

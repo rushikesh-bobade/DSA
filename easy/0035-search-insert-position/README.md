@@ -40,20 +40,22 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-06-15T20:23:00.699Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-06-15T20:42:34.773Z  
 
 ```java
-            }else{
-                s=mid+1;
-            }else if(nums[mid]<target){
                 return mid;
+            }else if(nums[mid]<target){
+                s=mid+1;
+            }else{
                 e=mid-1;
             }
         }
         return -1;
     }
-}
+            if(nums[mid]==target){
+
+             int mid=s+(e-s)/2;
 
 ```
 

@@ -51,21 +51,41 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-06-15T20:37:25.663Z  
+**Runtime:** 3 ms (beats 99.96%)  
+**Memory:** 202.9 MB (beats 8.03%)  
+**Submitted:** 2026-06-15T20:37:31.756Z  
 
 ```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode deleteMiddle(ListNode head) {
+       if(head==null || head.next==null){
+        return null;
+       }
 
-        while(fast!=null && fast.next!=null){
-            prev=slow;
-            slow=slow.next;
-            fast=fast.next.next;
-        }
+        ListNode slow=head;
+        ListNode fast=head;
+        ListNode prev=null;
 
-        prev.next = slow.next;
-        return head;
+        while(fast!=null && fast.next!=null){
+            prev=slow;
+            slow=slow.next;
+            fast=fast.next.next;
+        }
 
+        prev.next = slow.next;
+        return head;
+    }
+}
 ```
 
 ---

@@ -5,8 +5,6 @@
                 e=mid-1;
             }
         }
-        return -1;
+        return s;
     }
-            if(nums[mid]==target){
-
-             int mid=s+(e-s)/2;
+}

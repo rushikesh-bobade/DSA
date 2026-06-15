@@ -52,11 +52,19 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-06-15T20:36:12.447Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-06-15T20:37:25.663Z  
 
 ```java
- 
+
+        while(fast!=null && fast.next!=null){
+            prev=slow;
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+
+        prev.next = slow.next;
+        return head;
 
 ```
 

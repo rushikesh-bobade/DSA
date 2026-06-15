@@ -40,8 +40,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 44.5 MB (beats 81.90%)  
-**Submitted:** 2026-06-15T20:44:01.204Z  
+**Memory:** 44.8 MB (beats 28.47%)  
+**Submitted:** 2026-06-15T20:44:44.480Z  
 
 ```java
 class Solution {
@@ -51,7 +51,7 @@ class Solution {
 
 
         while(s<=e){
-             int mid=(s+e)/2;
+             int mid=s+(e-s)/2;
 
             if(nums[mid]==target){
                 return mid;

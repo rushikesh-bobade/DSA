@@ -41,7 +41,7 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.4 MB  
-**Submitted:** 2026-06-15T20:42:34.773Z  
+**Submitted:** 2026-06-15T20:43:39.356Z  
 
 ```java
                 return mid;
@@ -51,11 +51,9 @@ Constraints:
                 e=mid-1;
             }
         }
-        return -1;
+        return s;
     }
-            if(nums[mid]==target){
-
-             int mid=s+(e-s)/2;
+}
 
 ```
 

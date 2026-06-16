@@ -57,23 +57,15 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-06-16T15:43:04.232Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-06-16T15:43:59.207Z  
 
 ```java
-            if(ch=='#'){
-                result.append(result);
-            }else if(ch=='%'){
                 result.reverse();
-
-            char ch = s.charAt(i);
- 
             }else if(ch=='*'){
                 if(result.length()>0){
-                    result.deleteCharAt(-1);
+                    result.deleteCharAt(result.length()-1);
                 }
-            }else{
-                result.append(result);
 
 ```
 

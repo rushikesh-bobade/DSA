@@ -74,26 +74,68 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-06-17T18:34:44.987Z  
+**Runtime:** 32 ms (beats 26.92%)  
+**Memory:** 47.7 MB (beats 88.46%)  
+**Submitted:** 2026-06-17T18:34:53.561Z  
 
 ```java
+class Solution {
+    public char processStr(String s, long k) {
 
-            } else if (ch == '%') {
+        int n = s.length();
+        long[] len = new long[n + 1];
 
-                long curLen = len[i + 1];
-                k = curLen - 1 - k;
+        for (int i = 0; i < n; i++) {
+            char ch = s.charAt(i);
 
-            } else { // '*'
-                // nothing to do
-            }
-        }
+            if (ch >= 'a' && ch <= 'z') {
+                len[i + 1] = len[i] + 1;
+            } else if (ch == '*') {
+                len[i + 1] = Math.max(0, len[i] - 1);
+            } else if (ch == '#') {
+                len[i + 1] = len[i] * 2;
+            } else { // %
+                len[i + 1] = len[i];
+            }
+        }
 
-        return '.';
-    }
+        long finalLen = len[n];
+
+        if (k >= finalLen) {
+            return '.';
+        }
+
+        for (int i = n - 1; i >= 0; i--) {
+
+            char ch = s.charAt(i);
+
+            if (ch >= 'a' && ch <= 'z') {
+
+                if (k == len[i + 1] - 1) {
+                    return ch;
+                }
+
+            } else if (ch == '#') {
+
+                long oldLen = len[i];
+
+                if (k >= oldLen) {
+                    k -= oldLen;
+                }
+
+            } else if (ch == '%') {
+
+                long curLen = len[i + 1];
+                k = curLen - 1 - k;
+
+            } else { // '*'
+                // nothing to do
+            }
+        }
+
+        return '.';
+    }
 }
-
 ```
 
 ---

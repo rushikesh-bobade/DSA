@@ -37,24 +37,23 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 44.9 MB  
-**Submitted:** 2026-06-18T06:41:56.982Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44 MB (beats 99.27%)  
+**Submitted:** 2026-06-18T06:42:02.483Z  
 
 ```java
-class Solution {
-    public double angleClock(int hour, int minutes) {
+class Solution {
+    public double angleClock(int hour, int minutes) {
 
-        double minuteAngle = minutes * 6.0;
+        double minuteAngle = minutes * 6.0;
 
-        double hourAngle = (hour % 12) * 30.0 + minutes * 0.5;
+        double hourAngle = (hour % 12) * 30.0 + minutes * 0.5;
 
-        double diff = Math.abs(hourAngle - minuteAngle);
+        double diff = Math.abs(hourAngle - minuteAngle);
 
-        return Math.min(diff, 360.0 - diff);
-    }
+        return Math.min(diff, 360.0 - diff);
+    }
 }
-
 ```
 
 ---
